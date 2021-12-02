@@ -1,0 +1,40 @@
+/* how we use flexbox and fixed positioning in the correct layout */
+
+.nav {
+  /*alwaysdothatsoitalwaysstayontopofeverything*/
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  height: 30px;
+  /*alwaysaddit*/
+  z-index: 1;
+  /*display: flex;
+  justify-content: space-between;
+
+
+  */ /*Animationsforhandleshow*/
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.nav-black {
+  background-color: #111;
+}
+
+.nav-logo {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.nav-avatar {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  width: 30px;
+  object-fit: contain;
+}

@@ -1,0 +1,49 @@
+.row {
+  color: white;
+  /* leave space so everything don't stay too close to left  */
+  margin-left: 20px;
+}
+
+.row-posters {
+  /* still column , now we need to turn it to row. 
+    we are in a container so we can make it flex 
+     power of flexbox here  */
+  /* this is over container  */
+  display: flex;
+  overflow-y: hidden;
+  /* add a scroll bar but this will take image space///crops*/
+  overflow-x: scroll;
+  /* now we add padding so image can transform  */
+  padding: 20px;
+}
+
+.row-posters::-webkit-scrollbar {
+  /* hide our scrollbar */
+  display: none;
+}
+
+.row-poster {
+  /*keep the aspect ratio,doesn matter what I do*/
+  object-fit: contain;
+  /*trick: image only take 100% of the screen, so not outside the screen,
+  we can see full image*/
+  width: 100%;
+  /*height of the image now we can see all images*/
+  max-height: 100px;
+  /* add margin so images dont touch each other */
+  margin-right: 10px;
+  /*change size , we give it a speed so it looks smooth*/
+  transition: transform 450ms;
+}
+
+.row-poster:hover {
+  /* we add a transform effect,make image bigger everytime we hover it */
+  transform: scale(1.08);
+}
+
+.row-poster-large {
+  max-height: 250px;
+}
+.row-poster-large:hover {
+  transform: scale(1.09);
+}
